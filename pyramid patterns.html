@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>patterns generator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .main{
+            border: 1px solid #ccc;
+            width: 90%;
+            max-width: 300px;
+            padding: 20px;
+            margin: 20px auto;
+        }
+        input {
+            border-radius: 12px;
+            padding-left: 5px;
+            border: 1px solid #ccc;
+        }
+        button{
+            border-radius: 12px;
+            background: slateblue;
+            color: white;
+            border: none;
+        }
+        #result{
+            font-size: 12px;
+            color: blue;
+            font-family: monospace;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h3>Prymid Patterns Maker</h3>
+        <input type ="text" id="userLength" placeholder="Enter repeating number">
+        <input type="text" id="userPrint" placeholder="Enter any symbol">
+        <button onclick="myFun()">Check</button>
+        <div id="result"></div>
+    </div>
+  
+  
+  <script>
+function myFun(){
+    let a = 1;
+    let b = document.getElementById("userLength").value;
+    let c = document.getElementById("userPrint").value;
+    let output = document.getElementById("result");
+    
+    for(let i = 1; i <= b; i++){
+        let str = "";
+        for(let j = 0; j < i; j++){
+            str = str + c;
+        }
+        document.write(str + "<br>");
+    }
+    
+   
+    
+}
+
+  </script>
+  
+</body>
+</html>
